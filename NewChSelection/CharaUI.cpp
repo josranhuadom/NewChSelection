@@ -78,7 +78,7 @@ void CharaUI::CharaRemove(class CharacterList<Character> thelist, struct Node<Ch
             cout << "请输入想要删除的角色编号："; cin >> No;
         } while (InputChecking(No));
 
-        thelist.Remove(No, n);//需要先解决增加角色时的编号问题
+        thelist.Remove(No, n);
     }
     return;
 }

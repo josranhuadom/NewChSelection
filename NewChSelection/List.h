@@ -180,7 +180,7 @@ void CharacterList<T>::Modify(int no, struct Node <Character>* n) {
 template <typename T>
 int CharacterList<T>::DetectExist(struct Node <Character>* n) {
     if (!n->Next) {
-        cout << "没有任何角色。\n";
+        cout << "没有任何角色。即将退回至主界面。\n";
         cout << endl;
         return 1;
     }
@@ -224,7 +224,7 @@ void NumList<T>::Remove(int removenum, struct Node <int>* n) {
         }
         Current = Current->Next;
     }
-    cout << "不存在该数字，退回至主界面\n" << endl;
+    cout << "不存在该数字，即将退回至主界面。\n" << endl;
     return;
 }
 
@@ -240,14 +240,14 @@ void NumList<T>::Modify(int modinum, struct Node <int>* n) {
         }
         Current = Current->Next;
     }
-    cout << "不存在该数字，退回至主界面\n" << endl;
+    cout << "不存在该数字，即将退回至主界面。\n" << endl;
     return;
 }
 
 template <typename T>
 int NumList<T>::DetectExist(struct Node <int>* n) {
     if (!n->Next) {
-        cout << "没有任何角色。\n";
+        cout << "没有任何数字。即将退回至主界面。\n";
         cout << endl;
         return 1;
     }

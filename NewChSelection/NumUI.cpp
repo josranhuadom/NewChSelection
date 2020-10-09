@@ -18,7 +18,10 @@ void NumUI::NumAdd(class NumList<int> thelist, struct Node<int>* n) {
 	return;
 }
 void NumUI::NumModify(class NumList<int> thelist, struct Node<int>* n) {
-	NumPrint(thelist, n); cout << endl;
+	if (thelist.DetectExist(n))
+		return;
+
+	NumPrint(thelist, n);
 	cout << "请输入想要更改的数字：";
 	int ModiNum; cin >> ModiNum;
 	thelist.Modify(ModiNum, n);
@@ -26,7 +29,10 @@ void NumUI::NumModify(class NumList<int> thelist, struct Node<int>* n) {
 	return;
 }
 void NumUI::NumRemove(class NumList<int> thelist, struct Node<int>* n) {
-	NumPrint(thelist, n); cout << endl;
+	if (thelist.DetectExist(n))
+		return;
+
+	NumPrint(thelist, n);
 	cout << "请输入想要删除的数字：";
 	int RemoveNum; cin >> RemoveNum;
 	thelist.Remove(RemoveNum, n);

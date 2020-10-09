@@ -44,6 +44,8 @@ int main(){
                 numui.NumRemove(numList, n1); break;
             case 4:
                 numui.NumPrint(numList, n1); break;
+            default:
+                cout << "不存在该选项，退回至主界面。\n"; cout << endl; break;
             }
             break;
 
@@ -60,9 +62,13 @@ int main(){
                 charaui.CharaPrint(charaList, n2); break;
                 //看看那个CharaWrongInput  和 CharacterNode* Get(unsigned); （备用）
                 //和unsigned Size();（备用）能不能排上用场
+            default:
+                cout << "不存在该选项，退回至主界面。\n"; cout << endl; break;
             }
-            
             break;
+
+        default:
+            cout << "不存在该选项，退回至主界面。\n"; cout << endl; break;
         }
     }
 
